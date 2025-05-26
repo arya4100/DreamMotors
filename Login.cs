@@ -16,5 +16,10 @@ namespace DreamMotors
         {
             InitializeComponent();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+}k
