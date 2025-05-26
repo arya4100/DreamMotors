@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,13 +63,14 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(110, -3);
+            this.label9.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(95, 9);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(321, 49);
+            this.label9.Size = new System.Drawing.Size(203, 38);
             this.label9.TabIndex = 54;
-            this.label9.Text = "Create an Account";
+            this.label9.Text = "Dream Motors";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // linkLabel1
             // 
@@ -246,11 +248,24 @@
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(1135, 14);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 38);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "Dream Motors";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1418, 968);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
@@ -299,5 +314,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
     }
 }
