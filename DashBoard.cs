@@ -82,5 +82,10 @@ namespace DreamMotors
         {
 
         }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

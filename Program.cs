@@ -16,7 +16,7 @@ namespace DreamMotors
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Register());
+            Application.Run(new DashBoard());
         }
     }
 }
