@@ -77,5 +77,10 @@ namespace DreamMotors
         {
 
         }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
