@@ -32,7 +32,8 @@ namespace DreamMotors
                 MessageBox.Show("Sign-in successfully!\nWelcome to DreamMotors!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Redirect to Dashboard
-                Dashboard dashboard = new Dashboard();
+                DashBoard dashboard = new DashBoard();
+               
                 dashboard.Show();
                 this.Hide(); // Hide registration form instead of closing
             }
@@ -49,6 +50,11 @@ namespace DreamMotors
                    !string.IsNullOrEmpty(lastName) &&
                    !string.IsNullOrEmpty(email) &&
                    !string.IsNullOrEmpty(password);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 
