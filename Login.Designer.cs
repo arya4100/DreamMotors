@@ -53,7 +53,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot__106_;
+           // this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot__106_;
             this.pictureBox1.Location = new System.Drawing.Point(653, 92);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(49, 21);

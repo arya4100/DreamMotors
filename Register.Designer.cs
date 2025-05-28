@@ -185,7 +185,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot__106_;
+           // this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot__106;
             this.pictureBox1.Location = new System.Drawing.Point(982, 63);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
