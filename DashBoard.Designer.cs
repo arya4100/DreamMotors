@@ -197,6 +197,7 @@ namespace DreamMotors
             this.btnCreateaccount.TabIndex = 62;
             this.btnCreateaccount.Text = "Create Account";
             this.btnCreateaccount.UseVisualStyleBackColor = false;
+            this.btnCreateaccount.Click += new System.EventHandler(this.btnCreateaccount_Click);
             // 
             // DashBoard
             // 
