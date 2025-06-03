@@ -228,6 +228,7 @@ namespace DreamMotors
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(639, 41);
             this.textBox3.TabIndex = 40;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox1
             // 

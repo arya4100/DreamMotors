@@ -31,5 +31,10 @@ namespace DreamMotors
         {
 
         }
+
+        private void Reset_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
