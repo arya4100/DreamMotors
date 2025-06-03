@@ -35,7 +35,7 @@ namespace DreamMotors
                 DashBoard dashboard = new DashBoard();
                
                 dashboard.Show();
-                this.Hide(); // Hide registration form instead of closing and open the dashboard
+                this.Hide(); // Hide registration form instead of closing
 
             }
             else
@@ -46,7 +46,7 @@ namespace DreamMotors
 
         private bool SaveToDatabase(string firstName, string lastName, string email, string password)
         {
-            //  database 
+            // Simulated database logic
             return !string.IsNullOrEmpty(firstName) &&
                    !string.IsNullOrEmpty(lastName) &&
                    !string.IsNullOrEmpty(email) &&
@@ -61,16 +61,9 @@ namespace DreamMotors
 
             loginForm.Show();
             this.Hide(); // Hide registration form instead of closing
-                         // //and when user clicks the i have already account
-                         // then it opens the login.
         }
 
         private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }
