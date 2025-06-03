@@ -56,7 +56,6 @@
             // 
             // pictureBox1
             // 
-         //   this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot__106_;
             this.pictureBox1.Location = new System.Drawing.Point(565, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -85,6 +84,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(956, 50);
             this.textBox4.TabIndex = 62;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
@@ -95,6 +95,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(960, 50);
             this.textBox3.TabIndex = 61;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button1
             // 
@@ -107,6 +108,7 @@
             this.button1.TabIndex = 60;
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label4
             // 

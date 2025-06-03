@@ -87,5 +87,12 @@ namespace DreamMotors
         {
 
         }
+
+        private void btnCreateaccount_Click(object sender, EventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+            this.Hide();  // Hide Dashboard while Register is open
+        }
     }
 }
