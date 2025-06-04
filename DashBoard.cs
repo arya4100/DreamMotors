@@ -83,7 +83,7 @@ namespace DreamMotors
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-
+            linkLabel1.Visible = false;
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
