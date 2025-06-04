@@ -1,126 +1,133 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DreamMotors
 {
     public partial class Reset : Form
     {
-        private string filePath = @"C:\DreamMotorsData\users.txt";
+        private readonly string userFolder = Path.Combine(Application.StartupPath, "UserData");
+
         public Reset()
         {
             InitializeComponent();
-            EnsureFileExists();
         }
 
-        private void EnsureFileExists()
-        {
-            string folder = Path.GetDirectoryName(filePath);
-            if (!Directory.Exists(folder))
-            {
-                Directory.CreateDirectory(folder);
-            }
-
-            if (!File.Exists(filePath))
-            {
-                // Create file with a default user
-                File.WriteAllText(filePath, "admin,1234\n");
-            }
-        }
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        // Empty event handlers (avoid errors)
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
+        private void textBox3_TextChanged(object sender, EventArgs e) { }
+        private void textBox4_TextChanged(object sender, EventArgs e) { }
+        private void label5_Click(object sender, EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string confirmPassword = textBox1.Text.Trim();
-            string newPassword = textBox2.Text;
-            string email = textBox3.Text;
+            string email = textBox3.Text.Trim();
             string oldPassword = textBox4.Text;
+            string newPassword = textBox2.Text;
+            string confirmPassword = textBox1.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(oldPassword) ||
-                string.IsNullOrWhiteSpace(newPassword) ||
-                string.IsNullOrWhiteSpace(confirmPassword))
+            if (string.IsNullOrEmpty(email) ||
+                string.IsNullOrEmpty(oldPassword) ||
+                string.IsNullOrEmpty(newPassword) ||
+                string.IsNullOrEmpty(confirmPassword))
             {
-                MessageBox.Show("Please fill in all fields.");
+                MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             if (newPassword != confirmPassword)
             {
-                MessageBox.Show("New password and confirmation do not match.");
+                MessageBox.Show("New password and confirmation do not match.", "Mismatch Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            bool userFound = false;
-            List<string> updatedLines = new List<string>();
-
-            foreach (var line in File.ReadAllLines(filePath))
+            try
             {
-                string[] parts = line.Split(',');
-                if (parts.Length == 2)
+                if (!Directory.Exists(userFolder))
                 {
-                    string existingEmail = parts[0].Trim();
-                    string existingPassword = parts[1].Trim();
+                    MessageBox.Show("No user data folder found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    if (string.Equals(existingEmail, email, StringComparison.OrdinalIgnoreCase))
-                        {
-                        if (existingPassword == oldPassword)
-                        {
-                            updatedLines.Add($"{email},{newPassword}");
-                            userFound = true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Old password is incorrect.");
-                            return;
-                        }
-                    }
-                    else
+                // Create safe email for filename pattern
+                string safeEmail = email.Replace("@", "_at_").Replace(".", "_");
+
+                // Find all user files for this email
+                string[] userFiles = Directory.GetFiles(userFolder, $"{safeEmail}_*.txt");
+
+                if (userFiles.Length == 0)
+                {
+                    MessageBox.Show("User with this email not found.", "User Not Found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Find latest file by ticks suffix
+                string latestFile = null;
+                long latestTicks = 0;
+                foreach (var file in userFiles)
+                {
+                    string fileName = Path.GetFileNameWithoutExtension(file);
+                    int underscoreIndex = fileName.LastIndexOf('_');
+                    if (underscoreIndex > 0)
                     {
-                        updatedLines.Add(line); // Preserve other users
+                        string ticksStr = fileName.Substring(underscoreIndex + 1);
+                        if (long.TryParse(ticksStr, out long ticks) && ticks > latestTicks)
+                        {
+                            latestTicks = ticks;
+                            latestFile = file;
+                        }
                     }
                 }
-            }
 
-            if (!userFound)
+                if (latestFile == null)
+                {
+                    MessageBox.Show("User file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Read all lines
+                string[] lines = File.ReadAllLines(latestFile);
+
+                // Find password line index and verify old password
+                int pwdLineIndex = -1;
+                string storedPassword = null;
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    if (lines[i].StartsWith("Password: "))
+                    {
+                        pwdLineIndex = i;
+                        storedPassword = lines[i].Substring("Password: ".Length);
+                        break;
+                    }
+                }
+
+                if (pwdLineIndex == -1)
+                {
+                    MessageBox.Show("Password info missing in user file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (storedPassword != oldPassword)
+                {
+                    MessageBox.Show("Old password is incorrect.", "Authentication Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Update password line
+                lines[pwdLineIndex] = "Password: " + newPassword;
+
+                // Save back to file
+                File.WriteAllLines(latestFile, lines);
+
+                MessageBox.Show("Password updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Email not found.");
-                return;
+                MessageBox.Show("Error updating password: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            File.WriteAllLines(filePath, updatedLines);
-            MessageBox.Show("Password updated successfully!");
-            this.Close();
         }
     }
 }
