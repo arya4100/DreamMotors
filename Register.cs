@@ -36,6 +36,7 @@ namespace DreamMotors
                
                 dashboard.Show();
                 this.Hide(); // Hide registration form instead of closing
+
             }
             else
             {
@@ -55,6 +56,11 @@ namespace DreamMotors
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+            // Redirect to login
+            Login loginForm = new Login();
+
+            loginForm.Show();
+            this.Hide(); // Hide registration form instead of closing
         }
 
         private void button1_Click_1(object sender, EventArgs e)
