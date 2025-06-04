@@ -32,9 +32,9 @@ namespace DreamMotors
         // Register button click - opens Register form
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Register registerForm = new Register();
-            registerForm.Show();
-            this.Hide();  // Hide Dashboard while Register is open
+            //Register registerForm = new Register();
+            //registerForm.Show();
+            //this.Hide();  // Hide Dashboard while Register is open
         }
 
         // Optional: handle labels or other buttons if needed
@@ -50,6 +50,9 @@ namespace DreamMotors
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Register registerForm = new Register();
+            registerForm.Show();
+            this.Hide();  // Hide Dashboard while Register is open
             // your code here if needed
         }
 

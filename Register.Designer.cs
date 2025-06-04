@@ -245,6 +245,8 @@ namespace DreamMotors
             this.btnUpload.Size = new System.Drawing.Size(340, 43);
             this.btnUpload.TabIndex = 58;
             this.btnUpload.Text = "Upload Your Document ";
+            this.btnUpload.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -274,6 +276,7 @@ namespace DreamMotors
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Register";
             this.Text = "Register";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Register_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
