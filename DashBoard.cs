@@ -17,8 +17,8 @@ namespace DreamMotors
             InitializeComponent();
 
             // Hook up the button click events (if not wired up in Designer)
-            btnLogin.Click += btnLogin_Click;
-            btnRegister.Click += btnRegister_Click;
+            //btnLogin.Click += btnLogin_Click;
+            //btnRegister.Click += btnRegister_Click;
         }
 
         // Login button click - opens Login form
