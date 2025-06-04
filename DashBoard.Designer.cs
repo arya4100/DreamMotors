@@ -51,6 +51,7 @@ namespace DreamMotors
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(84, 7);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -85,7 +86,7 @@ namespace DreamMotors
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel1.Controls.Add(this.btnInventory);
             this.panel1.Controls.Add(this.btnBrands);
             this.panel1.Controls.Add(this.btnRegister);
@@ -93,7 +94,8 @@ namespace DreamMotors
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1305, 46);
+            this.panel1.Size = new System.Drawing.Size(1538, 58);
+
             this.panel1.TabIndex = 57;
             // 
             // btnInventory
@@ -142,6 +144,7 @@ namespace DreamMotors
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot106;
             this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -153,7 +156,7 @@ namespace DreamMotors
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -168,7 +171,7 @@ namespace DreamMotors
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.textBox2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -184,7 +187,7 @@ namespace DreamMotors
             // 
             // btnBrowseinventory
             // 
-            this.btnBrowseinventory.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnBrowseinventory.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnBrowseinventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseinventory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBrowseinventory.Location = new System.Drawing.Point(236, 375);
@@ -197,7 +200,7 @@ namespace DreamMotors
             // 
             // btnCreateaccount
             // 
-            this.btnCreateaccount.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCreateaccount.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCreateaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateaccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCreateaccount.Location = new System.Drawing.Point(52, 375);
@@ -213,7 +216,8 @@ namespace DreamMotors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 567);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ClientSize = new System.Drawing.Size(1587, 778);
             this.Controls.Add(this.btnCreateaccount);
             this.Controls.Add(this.btnBrowseinventory);
             this.Controls.Add(this.textBox2);
