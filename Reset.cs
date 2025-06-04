@@ -51,10 +51,8 @@ namespace DreamMotors
                     return;
                 }
 
-                // Create safe email for filename pattern
                 string safeEmail = email.Replace("@", "_at_").Replace(".", "_");
 
-                // Find all user files for this email
                 string[] userFiles = Directory.GetFiles(userFolder, $"{safeEmail}_*.txt");
 
                 if (userFiles.Length == 0)
@@ -63,7 +61,6 @@ namespace DreamMotors
                     return;
                 }
 
-                // Find latest file by ticks suffix
                 string latestFile = null;
                 long latestTicks = 0;
                 foreach (var file in userFiles)
@@ -87,10 +84,8 @@ namespace DreamMotors
                     return;
                 }
 
-                // Read all lines
                 string[] lines = File.ReadAllLines(latestFile);
 
-                // Find password line index and verify old password
                 int pwdLineIndex = -1;
                 string storedPassword = null;
                 for (int i = 0; i < lines.Length; i++)
@@ -115,14 +110,17 @@ namespace DreamMotors
                     return;
                 }
 
-                // Update password line
                 lines[pwdLineIndex] = "Password: " + newPassword;
-
-                // Save back to file
                 File.WriteAllLines(latestFile, lines);
 
                 MessageBox.Show("Password updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+
+                // Open login form
+                Login loginForm = new Login();
+                loginForm.Show();
+
+                // Hide this reset form
+                this.Hide();
             }
             catch (Exception ex)
             {
