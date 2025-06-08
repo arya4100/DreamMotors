@@ -229,5 +229,10 @@ namespace DreamMotors
                 MessageBox.Show($"Error closing form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void ViewDetail_Load_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -77,7 +77,6 @@ namespace DreamMotors
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Dream Motors";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -324,7 +323,7 @@ namespace DreamMotors
             this.Name = "ViewDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dream Motors - View Details";
-            this.Load += new System.EventHandler(this.ViewDetail_Load_1);
+            this.Load += new System.EventHandler(this.ViewDetail_Load_2);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
