@@ -123,5 +123,11 @@ namespace DreamMotors
             this.Hide();  // Hide Login while Reset is open
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register registerForm = new Register();
+            registerForm.Show();
+            this.Hide();
+        }
     }
 }
