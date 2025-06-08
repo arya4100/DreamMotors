@@ -8,7 +8,7 @@ namespace DreamMotors
     {
         public ViewDetail()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void ViewDetail_Load(object sender, EventArgs e)
