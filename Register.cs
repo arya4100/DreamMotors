@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace DreamMotors
@@ -11,50 +12,72 @@ namespace DreamMotors
             InitializeComponent();
         }
 
+        // Email validation using Regex
+        private bool IsValidEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
+        }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            // Validate input fields
-            if (string.IsNullOrWhiteSpace(textBox1.Text) ||      // First Name
-                string.IsNullOrWhiteSpace(textBox2.Text) ||      // Last Name
-                string.IsNullOrWhiteSpace(textBox3.Text) ||      // Email
-                string.IsNullOrWhiteSpace(textBox4.Text) ||      // Password
-                string.IsNullOrWhiteSpace(textBox5.Text) ||      // Confirm Password
-                textBox4.Text != textBox5.Text)                   // Password match check
+            string firstName = textBox1.Text.Trim();
+            string lastName = textBox2.Text.Trim();
+            string email = textBox3.Text.Trim();
+            string password = textBox4.Text;
+            string confirmPassword = textBox5.Text;
+
+            // Input validation
+            if (string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(email) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(confirmPassword))
             {
-                MessageBox.Show("Please fill all fields correctly and ensure passwords match!", "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("All fields are required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!IsValidEmail(email))
+            {
+                MessageBox.Show("Invalid email format. Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                // Create directory to store user data
+                // Save user data
                 string folderPath = Path.Combine(Application.StartupPath, "UserData");
                 Directory.CreateDirectory(folderPath);
 
-                // Generate safe file name
-                string safeEmail = textBox3.Text.Replace("@", "_at_").Replace(".", "_");
+                string safeEmail = email.Replace("@", "_at_").Replace(".", "_");
                 string fileName = $"{safeEmail}_{DateTime.Now.Ticks}.txt";
                 string filePath = Path.Combine(folderPath, fileName);
 
-                // Save data to file
                 using (StreamWriter writer = new StreamWriter(filePath))
                 {
-                    writer.WriteLine("First Name: " + textBox1.Text);
-                    writer.WriteLine("Last Name: " + textBox2.Text);
-                    writer.WriteLine("Email: " + textBox3.Text);
-                    writer.WriteLine("Password: " + textBox4.Text); // Don't store raw passwords in real apps!
+                    writer.WriteLine("First Name: " + firstName);
+                    writer.WriteLine("Last Name: " + lastName);
+                    writer.WriteLine("Email: " + email);
+                    writer.WriteLine("Password: " + password); // Never store plain passwords in production!
                 }
 
-                MessageBox.Show("Sign-in successfully!\nWelcome to DreamMotors!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Sign-up successful!\nWelcome to DreamMotors!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Open dashboard
+                // Navigate to dashboard
                 DashBoard dashboard = new DashBoard();
                 dashboard.Show();
                 this.Hide();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error saving data: " + ex.Message, "File Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -71,15 +94,12 @@ namespace DreamMotors
 
                     try
                     {
-                        // Create folder for uploads inside application folder
                         string uploadFolder = Path.Combine(Application.StartupPath, "UserUploads");
                         Directory.CreateDirectory(uploadFolder);
 
-                        // Use original file name
                         string fileName = Path.GetFileName(selectedFilePath);
                         string destinationPath = Path.Combine(uploadFolder, fileName);
 
-                        // Copy the selected file to the upload folder, overwrite if exists
                         File.Copy(selectedFilePath, destinationPath, true);
 
                         MessageBox.Show("File uploaded and saved to:\n" + destinationPath, "Upload Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,6 +110,11 @@ namespace DreamMotors
                     }
                 }
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            // Optionally add live email validation feedback here
         }
     }
 }
