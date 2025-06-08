@@ -358,5 +358,7 @@ namespace DreamMotors
         private Button button1;
         private Button button2;
         private PictureBox pictureBox2;
+        private EventHandler label1_Click;
+        private EventHandler ViewDetail_Load_1;
     }
 }

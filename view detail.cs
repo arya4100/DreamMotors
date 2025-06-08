@@ -13,27 +13,77 @@ namespace DreamMotors
 
         private void ViewDetail_Load(object sender, EventArgs e)
         {
-            // Form load initialization logic
+            // Form initialization
             this.WindowState = FormWindowState.Normal;
             this.CenterToScreen();
         }
 
-        // Action Button Event Handlers
+        // Navigation button event handlers
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Navigating to Inventory page...",
+                              "Navigation",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+
+                // Here you would typically open the Inventory form
+                // InventoryForm inventoryForm = new InventoryForm();
+                // inventoryForm.Show();
+                // this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnBrands_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Navigating to Brands page...",
+                              "Navigation",
+                              MessageBoxButtons.OK,
+                              MessageBoxIcon.Information);
+
+                // Here you would typically open the Brands form
+                // BrandsForm brandsForm = new BrandsForm();
+                // brandsForm.Show();
+                // this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Action button event handlers
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
             try
             {
-                MessageBox.Show("Vehicle added to cart successfully!",
-                              "Success",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show(
+                    "Add 2023 Toyota Camry to your cart?\n\nPrice: $28,000",
+                    "Add to Cart",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("2023 Toyota Camry has been added to your cart successfully!",
+                                  "Success",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Information);
+
+                    // Here you would typically add the item to a shopping cart system
+                    // CartManager.AddItem(new CarItem("2023 Toyota Camry", 28000));
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error adding to cart: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
+                MessageBox.Show($"Error adding to cart: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -41,252 +91,143 @@ namespace DreamMotors
         {
             try
             {
-                // Here you would typically open an email form or send an email
-                MessageBox.Show("Email request sent! We will contact you shortly with more information about this vehicle.",
-                              "Email Sent",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error sending email: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnScheduleDrive_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                // Here you would typically open a scheduling form
-                DialogResult result = MessageBox.Show("Would you like to schedule a test drive for this vehicle?",
-                                                    "Schedule Test Drive",
-                                                    MessageBoxButtons.YesNo,
-                                                    MessageBoxIcon.Question);
+                DialogResult result = MessageBox.Show(
+                    "Would you like to receive more information about the 2023 Toyota Camry via email?",
+                    "Email Information",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
                 if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Test drive scheduled! We will contact you to confirm the appointment.",
-                                  "Scheduled",
+                    // Here you could open an email form or send an automated email
+                    string emailBody = "Dear Customer,\n\n" +
+                                     "Thank you for your interest in the 2023 Toyota Camry.\n\n" +
+                                     "Vehicle Details:\n" +
+                                     "- Model: 2023 Toyota Camry\n" +
+                                     "- Condition: Excellent\n" +
+                                     "- Type: Sedan\n" +
+                                     "- Price: $28,000\n" +
+                                     "- Mileage: 15,000 miles\n" +
+                                     "- Transmission: Automatic\n" +
+                                     "- Fuel Type: Gasoline\n\n" +
+                                     "Please contact us for more information or to schedule a test drive.\n\n" +
+                                     "Best regards,\n" +
+                                     "Dream Motors Team";
+
+                    MessageBox.Show("Email information request sent successfully!\n\nWe will contact you shortly with detailed information about this vehicle.",
+                                  "Email Sent",
                                   MessageBoxButtons.OK,
                                   MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error scheduling test drive: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
+                MessageBox.Show($"Error sending email: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Navigation Button Event Handlers
-        private void btnInventory_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBrands_Click(object sender, EventArgs e)
+        private void btnScheduleTestDrive_Click(object sender, EventArgs e)
         {
             try
             {
-                // Navigate to brands form
-                MessageBox.Show("Opening Brands page...",
-                              "Navigation",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show(
+                    "Would you like to schedule a test drive for the 2023 Toyota Camry?",
+                    "Schedule Test Drive",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
 
-                // Example navigation:
-                // BrandsForm brandsForm = new BrandsForm();
-                // brandsForm.Show();
-                // this.Hide();
+                if (result == DialogResult.Yes)
+                {
+                    // Here you could open a scheduling form
+                    MessageBox.Show("Test drive request submitted successfully!\n\n" +
+                                  "Our team will contact you within 24 hours to confirm your appointment.\n\n" +
+                                  "Vehicle: 2023 Toyota Camry\n" +
+                                  "Location: Dream Motors Showroom",
+                                  "Test Drive Scheduled",
+                                  MessageBoxButtons.OK,
+                                  MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error opening brands: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
+                MessageBox.Show($"Error scheduling test drive: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        // Method to update car details dynamically (for future use)
+        public void UpdateCarDetails(string model, string condition, string type, decimal price,
+                                   int mileage, string transmission, string fuelType, int year, Image carImage = null)
         {
             try
             {
-                // Navigate to register form
-                MessageBox.Show("Opening Registration page...",
-                              "Navigation",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Information);
-
-                // Example navigation:
-                // RegisterForm registerForm = new RegisterForm();
-                // registerForm.Show();
-                // this.Hide();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error opening registration: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
-            }
-        }
-
-        // Method to update car details (you can call this to change the displayed car)
-        public void UpdateCarDetails(string carTitle, string condition, string type, string price,
-                                   string mileage, string transmission, string fuelType, string year)
-        {
-            try
-            {
-                // Find and update the labels
+                // Update car title
                 foreach (Control control in this.Controls)
                 {
                     if (control is Label label)
                     {
-                        switch (label.Name)
+                        if (label.Font.Size > 20) // Assuming this is the main title
                         {
-                            case "lblCarTitle":
-                                label.Text = carTitle;
-                                break;
-                            case "lblCondition":
-                                label.Text = condition;
-                                break;
-                            case "lblType":
-                                label.Text = type;
-                                break;
-                            case "lblPrice":
-                                label.Text = price;
-                                break;
-                            case "lblMileage":
-                                label.Text = $"Mileage: {mileage}";
-                                break;
-                            case "lblTransmission":
-                                label.Text = $"Transmission: {transmission}";
-                                break;
-                            case "lblFuelType":
-                                label.Text = $"Fuel Type: {fuelType}";
-                                break;
-                            case "lblYear":
-                                label.Text = $"Year: {year}";
-                                break;
+                            label.Text = model;
+                        }
+                        else if (label.Text.Contains("$"))
+                        {
+                            label.Text = $"${price:N0}";
+                        }
+                        else if (label.Text.Contains("miles"))
+                        {
+                            label.Text = $"{mileage:N0} miles";
+                        }
+                        else if (label.Text.Contains("Transmission"))
+                        {
+                            label.Text = transmission;
+                        }
+                        else if (label.Text.Contains("Fuel Type"))
+                        {
+                            label.Text = fuelType;
+                        }
+                        else if (label.Text.Contains("Year") || label.Text == year.ToString())
+                        {
+                            label.Text = year.ToString();
+                        }
+                    }
+                    else if (control is PictureBox pictureBox && carImage != null)
+                    {
+                        if (pictureBox.Size.Width > 300) // Assuming this is the main car image
+                        {
+                            pictureBox.Image = carImage;
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating car details: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
+                MessageBox.Show($"Error updating car details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Method to update car image
-        public void UpdateCarImage(Image newImage)
-        {
-            try
-            {
-                foreach (Control control in this.Controls)
-                {
-                    if (control is PictureBox pictureBox && pictureBox.Size.Width > 500) // Assuming the car image is the large PictureBox
-                    {
-                        pictureBox.Image = newImage;
-                        break;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error updating car image: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
-            }
-        }
-
-        // Override the form closing event if needed
+        // Form closing event
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             try
             {
-                // Add any cleanup logic here if needed
+                DialogResult result = MessageBox.Show(
+                    "Are you sure you want to close the vehicle details?",
+                    "Confirm Close",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
+
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    return;
+                }
+
                 base.OnFormClosing(e);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error closing form: {ex.Message}",
-                              "Error",
-                              MessageBoxButtons.OK,
-                              MessageBoxIcon.Error);
+                MessageBox.Show($"Error closing form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        // Method to handle any unhandled exceptions
-        private void HandleException(Exception ex, string operation)
-        {
-            string message = $"An error occurred during {operation}:\n\n{ex.Message}";
-            MessageBox.Show(message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnCreateaccount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBrowseinventory_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ViewDetail_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
