@@ -112,9 +112,17 @@ namespace DreamMotors
             }
         }
 
+ yubraj_view-details
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             // Optionally add live email validation feedback here
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login loginForm = new Login();
+            loginForm.Show();
+            this.Hide();
+ master
         }
     }
 }
