@@ -63,6 +63,16 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap aqua {
+            get {
+                object obj = ResourceManager.GetObject("aqua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap camry {
             get {
                 object obj = ResourceManager.GetObject("camry", resourceCulture);
@@ -76,6 +86,26 @@ namespace DreamMotors.Properties {
         public static System.Drawing.Bitmap corolla {
             get {
                 object obj = ResourceManager.GetObject("corolla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Fortuner {
+            get {
+                object obj = ResourceManager.GetObject("Fortuner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap highlander {
+            get {
+                object obj = ResourceManager.GetObject("highlander", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,6 +163,16 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap prius {
+            get {
+                object obj = ResourceManager.GetObject("prius", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap rav4 {
             get {
                 object obj = ResourceManager.GetObject("rav4", resourceCulture);
@@ -146,6 +186,16 @@ namespace DreamMotors.Properties {
         public static System.Drawing.Bitmap Screenshot106 {
             get {
                 object obj = ResourceManager.GetObject("Screenshot106", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap yaris {
+            get {
+                object obj = ResourceManager.GetObject("yaris", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
