@@ -14,6 +14,7 @@ namespace DreamMotors
     {
         public DashBoard()
         {
+        
             InitializeComponent();
 
             // Hook up the button click events (if not wired up in Designer)
