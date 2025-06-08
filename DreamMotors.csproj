@@ -98,7 +98,17 @@
     <Compile Include="Reset.Designer.cs">
       <DependentUpon>Reset.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="view detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view detail.Designer.cs">
+      <DependentUpon>view detail.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +131,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view detail.resx">
       <DependentUpon>view detail.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>view detail.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
