@@ -53,9 +53,10 @@ namespace DreamMotors
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(63, 6);
+            this.label9.Location = new System.Drawing.Point(94, 9);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(143, 26);
+            this.label9.Size = new System.Drawing.Size(203, 38);
             this.label9.TabIndex = 54;
             this.label9.Text = "Dream Motors";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -64,26 +65,21 @@ namespace DreamMotors
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.RosyBrown;
-            this.linkLabel1.Location = new System.Drawing.Point(368, 521);
+            this.linkLabel1.Location = new System.Drawing.Point(552, 802);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(158, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(231, 20);
             this.linkLabel1.TabIndex = 53;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Already have an account?Login";
             // 
             // btnLogin
             // 
-//yubraj_view-details
-            this.btnLogin.Location = new System.Drawing.Point(709, 6);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(58, 28);
 
-            this.btnLogin.Location = new System.Drawing.Point(1064, 10);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogin.Location = new System.Drawing.Point(1596, 15);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(87, 42);
- //master
+            this.btnLogin.Size = new System.Drawing.Size(130, 65);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -97,32 +93,19 @@ namespace DreamMotors
             this.panel1.Controls.Add(this.btnBrands);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.btnLogin);
- //yubraj_view-details
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(4, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(979, 38);
-
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1508, 62);
- //master
+            this.panel1.Size = new System.Drawing.Size(2262, 95);
             this.panel1.TabIndex = 57;
             // 
             // btnInventory
             // 
- //yubraj_view-details
-            this.btnInventory.Location = new System.Drawing.Point(909, 6);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(58, 28);
 
-            this.btnInventory.Location = new System.Drawing.Point(1364, 9);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventory.Location = new System.Drawing.Point(2046, 14);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(87, 42);
- //master
+            this.btnInventory.Size = new System.Drawing.Size(130, 65);
             this.btnInventory.TabIndex = 58;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.UseVisualStyleBackColor = true;
@@ -130,34 +113,22 @@ namespace DreamMotors
             // 
             // btnBrands
             // 
- //yubraj_view-details
-            this.btnBrands.Location = new System.Drawing.Point(845, 6);
-            this.btnBrands.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBrands.Name = "btnBrands";
-            this.btnBrands.Size = new System.Drawing.Size(58, 28);
 
-            this.btnBrands.Location = new System.Drawing.Point(1267, 9);
-            this.btnBrands.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrands.Location = new System.Drawing.Point(1900, 14);
+            this.btnBrands.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBrands.Name = "btnBrands";
-            this.btnBrands.Size = new System.Drawing.Size(87, 42);
- //master
+            this.btnBrands.Size = new System.Drawing.Size(130, 65);
             this.btnBrands.TabIndex = 58;
             this.btnBrands.Text = "Brands";
             this.btnBrands.UseVisualStyleBackColor = true;
             // 
             // btnRegister
             // 
- //yubraj_view-details
-            this.btnRegister.Location = new System.Drawing.Point(777, 6);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(58, 28);
 
-            this.btnRegister.Location = new System.Drawing.Point(1166, 10);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRegister.Location = new System.Drawing.Point(1749, 15);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(87, 42);
- //master
+            this.btnRegister.Size = new System.Drawing.Size(130, 65);
             this.btnRegister.TabIndex = 58;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -166,15 +137,11 @@ namespace DreamMotors
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DreamMotors.Properties.Resources.PlatinumAutoBehance;
- //yubraj_view-details
-            this.pictureBox2.Location = new System.Drawing.Point(440, 78);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
-            this.pictureBox2.Location = new System.Drawing.Point(736, 120);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
- //master
+            this.pictureBox2.Location = new System.Drawing.Point(1104, 185);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(735, 575);
+            this.pictureBox2.Size = new System.Drawing.Size(1102, 885);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 58;
             this.pictureBox2.TabStop = false;
@@ -184,9 +151,10 @@ namespace DreamMotors
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Image = global::DreamMotors.Properties.Resources.Screenshot106;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(14, 14);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(74, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 56;
             this.pictureBox1.TabStop = false;
@@ -197,19 +165,12 @@ namespace DreamMotors
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
- //yubraj_view-details
-            this.textBox1.Location = new System.Drawing.Point(9, 162);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(396, 41);
 
-            this.textBox1.Location = new System.Drawing.Point(14, 249);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Location = new System.Drawing.Point(21, 383);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(594, 62);
- //master
+            this.textBox1.Size = new System.Drawing.Size(891, 95);
             this.textBox1.TabIndex = 59;
             this.textBox1.Text = "Find Your Perfect Car";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
@@ -220,16 +181,12 @@ namespace DreamMotors
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
- //yubraj_view-details
-            this.textBox2.Location = new System.Drawing.Point(15, 207);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
-            this.textBox2.Location = new System.Drawing.Point(22, 318);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
- //master
+            this.textBox2.Location = new System.Drawing.Point(33, 489);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(375, 53);
+            this.textBox2.Size = new System.Drawing.Size(562, 82);
             this.textBox2.TabIndex = 60;
             this.textBox2.Text = "Browse our extensive inventory of new and used vehicles.\r\nCompare models,prices a" +
     "nd features to find the perfect match \r\nfor your needs.\r\n";
@@ -240,14 +197,10 @@ namespace DreamMotors
             this.btnBrowseinventory.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnBrowseinventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseinventory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-//yubraj_view-details
-            this.btnBrowseinventory.Location = new System.Drawing.Point(177, 305);
-            this.btnBrowseinventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-   this.btnBrowseinventory.Location = new System.Drawing.Point(266, 469);
-            this.btnBrowseinventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
- //master
+            this.btnBrowseinventory.Location = new System.Drawing.Point(399, 722);
+            this.btnBrowseinventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBrowseinventory.Name = "btnBrowseinventory";
-            this.btnBrowseinventory.Size = new System.Drawing.Size(103, 40);
+            this.btnBrowseinventory.Size = new System.Drawing.Size(154, 62);
             this.btnBrowseinventory.TabIndex = 61;
             this.btnBrowseinventory.Text = "Browse Inventory";
             this.btnBrowseinventory.UseVisualStyleBackColor = false;
@@ -257,15 +210,11 @@ namespace DreamMotors
             this.btnCreateaccount.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCreateaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateaccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
- //yubraj_view-details
-            this.btnCreateaccount.Location = new System.Drawing.Point(39, 305);
-            this.btnCreateaccount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
-            this.btnCreateaccount.Location = new System.Drawing.Point(58, 469);
-            this.btnCreateaccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
- //master
+            this.btnCreateaccount.Location = new System.Drawing.Point(87, 722);
+            this.btnCreateaccount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreateaccount.Name = "btnCreateaccount";
-            this.btnCreateaccount.Size = new System.Drawing.Size(103, 40);
+            this.btnCreateaccount.Size = new System.Drawing.Size(154, 62);
             this.btnCreateaccount.TabIndex = 62;
             this.btnCreateaccount.Text = "Create Account";
             this.btnCreateaccount.UseVisualStyleBackColor = false;
@@ -273,14 +222,11 @@ namespace DreamMotors
             // 
             // DashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
- //yubraj_view-details
-            this.ClientSize = new System.Drawing.Size(989, 679);
 
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1512, 972);
-//master
+            this.ClientSize = new System.Drawing.Size(1924, 1170);
             this.Controls.Add(this.btnCreateaccount);
             this.Controls.Add(this.btnBrowseinventory);
             this.Controls.Add(this.textBox2);
@@ -290,11 +236,8 @@ namespace DreamMotors
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
- //yubraj_view-details
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
 
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
- //master
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

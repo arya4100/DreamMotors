@@ -8,7 +8,7 @@ namespace DreamMotors
     {
         public ViewDetail()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void ViewDetail_Load(object sender, EventArgs e)
@@ -231,6 +231,11 @@ namespace DreamMotors
         }
 
         private void ViewDetail_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
