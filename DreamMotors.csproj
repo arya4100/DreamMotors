@@ -52,6 +52,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -96,13 +108,21 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view detail.Designer.cs">
-      <DependentUpon>view detail.cs</DependentUpon>
+      <DependentUpon>view detail.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -120,6 +140,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="view detail.resx">
       <DependentUpon>view detail.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>view detail.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,7 +175,30 @@
     <None Include="Resources\Screenshot %28106%291.png" />
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Resources\corolla.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\camry.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rav4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Jun 9, 2025, 10_27_32 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlander.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prius.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yaris.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aqua.jpg" />
+  </ItemGroup>
+
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
