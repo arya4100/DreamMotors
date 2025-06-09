@@ -75,6 +75,7 @@ namespace DreamMotors
             // 
             // btnLogin
             // 
+
             this.btnLogin.Location = new System.Drawing.Point(1596, 15);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogin.Name = "btnLogin";
@@ -100,6 +101,7 @@ namespace DreamMotors
             // 
             // btnInventory
             // 
+
             this.btnInventory.Location = new System.Drawing.Point(2046, 14);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInventory.Name = "btnInventory";
@@ -111,6 +113,7 @@ namespace DreamMotors
             // 
             // btnBrands
             // 
+
             this.btnBrands.Location = new System.Drawing.Point(1900, 14);
             this.btnBrands.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBrands.Name = "btnBrands";
@@ -121,6 +124,7 @@ namespace DreamMotors
             // 
             // btnRegister
             // 
+
             this.btnRegister.Location = new System.Drawing.Point(1749, 15);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRegister.Name = "btnRegister";
@@ -133,6 +137,7 @@ namespace DreamMotors
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DreamMotors.Properties.Resources.PlatinumAutoBehance;
+
             this.pictureBox2.Location = new System.Drawing.Point(1104, 185);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -160,6 +165,7 @@ namespace DreamMotors
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+
             this.textBox1.Location = new System.Drawing.Point(21, 383);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Multiline = true;
@@ -175,6 +181,7 @@ namespace DreamMotors
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+
             this.textBox2.Location = new System.Drawing.Point(33, 489);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox2.Multiline = true;
@@ -203,6 +210,7 @@ namespace DreamMotors
             this.btnCreateaccount.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCreateaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateaccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+
             this.btnCreateaccount.Location = new System.Drawing.Point(87, 722);
             this.btnCreateaccount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCreateaccount.Name = "btnCreateaccount";
@@ -216,6 +224,7 @@ namespace DreamMotors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1924, 1170);
             this.Controls.Add(this.btnCreateaccount);
@@ -227,6 +236,7 @@ namespace DreamMotors
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.linkLabel1);
+
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
