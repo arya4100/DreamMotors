@@ -63,6 +63,7 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         public static System.Drawing.Bitmap aqua {
             get {
                 object obj = ResourceManager.GetObject("aqua", resourceCulture);
@@ -73,6 +74,7 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         public static System.Drawing.Bitmap camry {
             get {
                 object obj = ResourceManager.GetObject("camry", resourceCulture);
@@ -83,6 +85,7 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         public static System.Drawing.Bitmap corolla {
             get {
                 object obj = ResourceManager.GetObject("corolla", resourceCulture);
@@ -113,6 +116,7 @@ namespace DreamMotors.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         public static System.Drawing.Bitmap Images {
             get {
                 object obj = ResourceManager.GetObject("Images", resourceCulture);
