@@ -303,7 +303,7 @@ namespace DreamMotors
             this.Controls.Add(this.richTextBox3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label14); 
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
