@@ -98,5 +98,13 @@ namespace DreamMotors
             registerForm.Show();
             this.Hide();  // Hide Dashboard while Register is open
         }
+
+        private void btnBrowseinventory_Click(object sender, EventArgs e)
+        {
+            
+                Inventory inventoryForm = new Inventory();
+                inventoryForm.Show();
+                this.Hide();
+        }
     }
 }
