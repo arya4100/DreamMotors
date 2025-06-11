@@ -234,5 +234,12 @@ namespace DreamMotors
         {
              
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cart detailsForm = new Cart();
+            detailsForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -132,5 +132,10 @@ namespace DreamMotors
                 DisplayCars(sorted);
             }
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
