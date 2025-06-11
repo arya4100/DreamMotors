@@ -31,11 +31,9 @@ namespace DreamMotors
         private void InitializeComponent()
         {
             this.label9 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
-            this.btnBrands = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,20 +58,9 @@ namespace DreamMotors
             this.label9.Text = "Dream Motors";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.RosyBrown;
-            this.linkLabel1.Location = new System.Drawing.Point(368, 521);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(158, 13);
-            this.linkLabel1.TabIndex = 53;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Already have an account?Login";
-            // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(960, 9);
+            this.btnLogin.Location = new System.Drawing.Point(1066, 9);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(87, 42);
@@ -87,7 +74,6 @@ namespace DreamMotors
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.panel1.Controls.Add(this.btnInventory);
-            this.panel1.Controls.Add(this.btnBrands);
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Location = new System.Drawing.Point(3, 2);
@@ -98,7 +84,7 @@ namespace DreamMotors
             // 
             // btnInventory
             // 
-            this.btnInventory.Location = new System.Drawing.Point(1286, 9);
+            this.btnInventory.Location = new System.Drawing.Point(1274, 9);
             this.btnInventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(87, 42);
@@ -107,19 +93,9 @@ namespace DreamMotors
             this.btnInventory.UseVisualStyleBackColor = true;
             this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
-            // btnBrands
-            // 
-            this.btnBrands.Location = new System.Drawing.Point(1188, 9);
-            this.btnBrands.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBrands.Name = "btnBrands";
-            this.btnBrands.Size = new System.Drawing.Size(87, 42);
-            this.btnBrands.TabIndex = 58;
-            this.btnBrands.Text = "Brands";
-            this.btnBrands.UseVisualStyleBackColor = true;
-            // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(1077, 9);
+            this.btnRegister.Location = new System.Drawing.Point(1171, 9);
             this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(87, 42);
@@ -215,7 +191,7 @@ namespace DreamMotors
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1352, 690);
+            this.ClientSize = new System.Drawing.Size(1406, 726);
             this.Controls.Add(this.btnCreateaccount);
             this.Controls.Add(this.btnBrowseinventory);
             this.Controls.Add(this.textBox2);
@@ -224,11 +200,9 @@ namespace DreamMotors
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.linkLabel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -242,11 +216,9 @@ namespace DreamMotors
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Button btnBrands;
         private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox1;
