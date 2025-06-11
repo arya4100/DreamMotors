@@ -163,7 +163,7 @@ namespace DreamMotors
             this.btnBrowseinventory.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnBrowseinventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrowseinventory.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnBrowseinventory.Location = new System.Drawing.Point(201, 469);
+            this.btnBrowseinventory.Location = new System.Drawing.Point(189, 399);
             this.btnBrowseinventory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBrowseinventory.Name = "btnBrowseinventory";
             this.btnBrowseinventory.Size = new System.Drawing.Size(103, 40);
@@ -177,7 +177,7 @@ namespace DreamMotors
             this.btnCreateaccount.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.btnCreateaccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateaccount.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCreateaccount.Location = new System.Drawing.Point(58, 469);
+            this.btnCreateaccount.Location = new System.Drawing.Point(56, 399);
             this.btnCreateaccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateaccount.Name = "btnCreateaccount";
             this.btnCreateaccount.Size = new System.Drawing.Size(103, 40);
@@ -203,6 +203,7 @@ namespace DreamMotors
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.DashBoard_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

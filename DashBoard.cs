@@ -89,7 +89,9 @@ namespace DreamMotors
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-
+            Inventory InventoryForm = new Inventory();
+            InventoryForm.Show();
+            this.Hide();
         }
 
         private void btnCreateaccount_Click(object sender, EventArgs e)
