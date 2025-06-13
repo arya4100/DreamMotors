@@ -55,10 +55,9 @@ namespace DreamMotors
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(825, 83);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(550, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(425, 65);
+            this.label9.Size = new System.Drawing.Size(286, 44);
             this.label9.TabIndex = 35;
             this.label9.Text = "Create an Account";
             // 
@@ -66,10 +65,9 @@ namespace DreamMotors
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkColor = System.Drawing.Color.RosyBrown;
-            this.linkLabel1.Location = new System.Drawing.Point(930, 897);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(656, 583);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(231, 20);
+            this.linkLabel1.Size = new System.Drawing.Size(158, 13);
             this.linkLabel1.TabIndex = 34;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Already have an account?Login";
@@ -78,21 +76,19 @@ namespace DreamMotors
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Location = new System.Drawing.Point(1112, 246);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox2.Location = new System.Drawing.Point(741, 160);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(326, 50);
+            this.textBox2.Size = new System.Drawing.Size(219, 34);
             this.textBox2.TabIndex = 29;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(614, 826);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(409, 537);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(958, 66);
+            this.button1.Size = new System.Drawing.Size(639, 43);
             this.button1.TabIndex = 27;
             this.button1.Text = "Register";
             this.button1.UseVisualStyleBackColor = false;
@@ -102,10 +98,9 @@ namespace DreamMotors
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(634, 794);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(411, 510);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(342, 20);
+            this.label7.Size = new System.Drawing.Size(231, 13);
             this.label7.TabIndex = 25;
             this.label7.Text = "Please upload a photo of your ID fro verification";
             // 
@@ -113,10 +108,9 @@ namespace DreamMotors
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(608, 678);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(405, 441);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 29);
+            this.label6.Size = new System.Drawing.Size(124, 20);
             this.label6.TabIndex = 24;
             this.label6.Text = "ID Verification";
             // 
@@ -124,10 +118,9 @@ namespace DreamMotors
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(608, 552);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(405, 359);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(226, 29);
+            this.label5.Size = new System.Drawing.Size(153, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Confirm Password";
             // 
@@ -135,10 +128,9 @@ namespace DreamMotors
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(615, 418);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(410, 272);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 29);
+            this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 22;
             this.label4.Text = "Password";
             // 
@@ -146,10 +138,9 @@ namespace DreamMotors
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(610, 303);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(407, 197);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 29);
+            this.label3.Size = new System.Drawing.Size(53, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Email";
             // 
@@ -157,10 +148,9 @@ namespace DreamMotors
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1108, 211);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(739, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 20;
             this.label2.Text = "Last name ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -169,20 +159,18 @@ namespace DreamMotors
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(604, 211);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(403, 137);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 29);
+            this.label1.Size = new System.Drawing.Size(94, 20);
             this.label1.TabIndex = 19;
             this.label1.Text = "First name";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(861, 151);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(574, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(343, 20);
+            this.label8.Size = new System.Drawing.Size(232, 13);
             this.label8.TabIndex = 26;
             this.label8.Text = "Register to browse and save your favourite cars";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -190,50 +178,45 @@ namespace DreamMotors
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox5.Location = new System.Drawing.Point(614, 594);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox5.Location = new System.Drawing.Point(409, 386);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(956, 61);
+            this.textBox5.Size = new System.Drawing.Size(639, 41);
             this.textBox5.TabIndex = 38;
             // 
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.Location = new System.Drawing.Point(614, 466);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox4.Location = new System.Drawing.Point(409, 303);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(956, 61);
+            this.textBox4.Size = new System.Drawing.Size(639, 41);
             this.textBox4.TabIndex = 39;
             // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Location = new System.Drawing.Point(614, 346);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox3.Location = new System.Drawing.Point(409, 225);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(956, 61);
+            this.textBox3.Size = new System.Drawing.Size(639, 41);
             this.textBox3.TabIndex = 40;
             // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox1.Location = new System.Drawing.Point(610, 246);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Location = new System.Drawing.Point(407, 160);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(326, 50);
+            this.textBox1.Size = new System.Drawing.Size(219, 34);
             this.textBox1.TabIndex = 41;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DreamMotors.Properties.Resources.Screenshot106;
-            this.pictureBox2.Location = new System.Drawing.Point(989, 55);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(659, 36);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 57;
             this.pictureBox2.TabStop = false;
@@ -241,21 +224,21 @@ namespace DreamMotors
             // btnUpload
             // 
             this.btnUpload.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnUpload.Location = new System.Drawing.Point(615, 723);
+            this.btnUpload.Location = new System.Drawing.Point(411, 472);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(340, 43);
+            this.btnUpload.Size = new System.Drawing.Size(227, 28);
             this.btnUpload.TabIndex = 58;
             this.btnUpload.Text = "Upload Your Document ";
-            this.btnUpload.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnUpload.UseVisualStyleBackColor = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1700, 968);
+            this.ClientSize = new System.Drawing.Size(1283, 690);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox1);
@@ -274,7 +257,6 @@ namespace DreamMotors
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Register";
             this.Text = "Register";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

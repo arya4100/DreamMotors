@@ -61,5 +61,12 @@ namespace DreamMotors
         {
             // You can leave this empty if not needed
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cart detailsForm = new Cart();
+            detailsForm.Show();
+            this.Hide();
+        }
     }
 }
