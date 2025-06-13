@@ -248,44 +248,6 @@ namespace DreamMotors
             this.label16.TabIndex = 19;
             this.label16.Text = "2023";
             // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.richTextBox3.Location = new System.Drawing.Point(545, 454);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(427, 38);
-            this.richTextBox3.TabIndex = 20;
-            this.richTextBox3.Text = "";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(707, 464);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(60, 13);
-            this.linkLabel1.TabIndex = 21;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Add to Cart";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(672, 509);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Email for More Info";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(672, 538);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Schedule test drive";
-            this.button2.UseVisualStyleBackColor = true;
-
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DreamMotors.Properties.Resources.Screenshot106;
