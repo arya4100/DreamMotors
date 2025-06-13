@@ -1,56 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace DreamMotors
 {
     public partial class Cart : Form
     {
-        private List<CartItem> cartItems = new List<CartItem>();
+        // Shared cart items across all Cart instances
+        private static List<CartItem> cartItems = new List<CartItem>();
 
         public Cart()
         {
             InitializeComponent();
-            UpdateCartDisplay();
+            LoadCartItems();
         }
 
-        public class CartItem
-        {
-            public string Name { get; set; }
-            public int Quantity { get; set; }
-            public decimal Price { get; set; }
-
-            public override string ToString()
-            {
-                return $"{Name} (x{Quantity}) - ${Price * Quantity}";
-            }
-        }
-
-        // Call this method whenever the cart is updated
-        private void UpdateCartDisplay()
+        private void LoadCartItems()
         {
             listBox1.Items.Clear();
-            decimal total = 0;
 
-            foreach (CartItem item in cartItems)
+            decimal total = 0;
+            int totalItems = 0;
+
+            foreach (var item in cartItems)
             {
-                listBox1.Items.Add(item);
+                listBox1.Items.Add(item.ToString());
                 total += item.Price * item.Quantity;
+                totalItems += item.Quantity;
             }
 
-            textBox1.Text = total.ToString("0.00"); // Total price
+            textBox1.Text = totalItems.ToString();        // Total quantity
+            textBox2.Text = $"${total:0.00}";             // Total price
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void AddToCart(string productName, int quantity, decimal price)
         {
+            var existingItem = cartItems.FirstOrDefault(i => i.Name == productName);
+            if (existingItem != null)
+            {
+                existingItem.Quantity += quantity;
+            }
+            else
+            {
+                cartItems.Add(new CartItem
+                {
+                    Name = productName,
+                    Quantity = quantity,
+                    Price = price
+                });
+            }
 
+            LoadCartItems();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace DreamMotors
             if (selectedIndex >= 0 && selectedIndex < cartItems.Count)
             {
                 cartItems.RemoveAt(selectedIndex);
-                UpdateCartDisplay();
+                LoadCartItems();
             }
             else
             {
@@ -75,29 +76,14 @@ namespace DreamMotors
                 return;
             }
 
-            MessageBox.Show("Thank you for your purchase!\nTotal: $" + textBox1.Text);
+            MessageBox.Show("Thank you for your purchase!", "Checkout Complete");
             cartItems.Clear();
-            UpdateCartDisplay();
+            LoadCartItems();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        // Optional empty handlers to avoid errors if Designer expects them
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
     }
 }
