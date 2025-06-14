@@ -167,11 +167,13 @@ namespace DreamMotors
             }
         }
 
+
         private bool IsValidFileType(string extension)
         {
             string[] validExtensions = { ".jpg", ".jpeg", ".png", ".gif", ".pdf" };
             return Array.IndexOf(validExtensions, extension) >= 0;
         }
+
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
@@ -195,11 +197,14 @@ namespace DreamMotors
             }
         }
 
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Login loginForm = new Login();
             loginForm.Show();
             this.Hide();
+
         }
+           
     }
 }

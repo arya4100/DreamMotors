@@ -84,12 +84,14 @@ namespace DreamMotors
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
-            linkLabel1.Visible = false;
+            
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-
+            Inventory InventoryForm = new Inventory();
+            InventoryForm.Show();
+            this.Hide();
         }
 
         private void btnCreateaccount_Click(object sender, EventArgs e)
@@ -97,6 +99,14 @@ namespace DreamMotors
             Register registerForm = new Register();
             registerForm.Show();
             this.Hide();  // Hide Dashboard while Register is open
+        }
+
+        private void btnBrowseinventory_Click(object sender, EventArgs e)
+        {
+            
+                Inventory inventoryForm = new Inventory();
+                inventoryForm.Show();
+                this.Hide();
         }
     }
 }
