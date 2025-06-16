@@ -68,5 +68,17 @@ namespace DreamMotors
             detailsForm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inventory InventoryForm = new Inventory();
+            InventoryForm.Show();
+            this.Hide();
+        }
     }
 }
