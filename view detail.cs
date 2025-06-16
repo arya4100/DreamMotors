@@ -13,11 +13,11 @@ namespace DreamMotors
 
         private void ViewDetail_Load(object sender, EventArgs e)
         {
-            // Set default specs text for Toyota Camry
-            richTextBox2.Text = "• Engine: 2.5L 4-Cylinder\n" +
-                                "• Horsepower: 203 hp\n" +
-                                "• MPG: 28 city / 39 highway\n" +
-                                "• Drivetrain: FWD";
+            //// Set default specs text for Toyota Camry
+            //richTextBox2.Text = "• Engine: 2.5L 4-Cylinder\n" +
+            //                    "• Horsepower: 203 hp\n" +
+            //                    "• MPG: 28 city / 39 highway\n" +
+            //                    "• Drivetrain: FWD";
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
