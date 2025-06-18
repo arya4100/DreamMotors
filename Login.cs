@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace DreamMotors
@@ -11,25 +13,21 @@ namespace DreamMotors
             InitializeComponent();
         }
 
-        // Event handler for form load
         private void Login_Load(object sender, EventArgs e)
         {
-            // Optional initialization code here
+            // Optional initialization code
         }
 
-        // Event handler for label9 click
         private void label9_Click(object sender, EventArgs e)
         {
-            // Optional label click logic here
+            // Optional label click logic
         }
 
-        // Event handler for textBox4 text changed
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            // Optional password box text changed logic here
+            // Optional password change logic
         }
 
-        // Login button click event
         private void button1_Click(object sender, EventArgs e)
         {
             string email = textBox1.Text.Trim();
@@ -44,8 +42,6 @@ namespace DreamMotors
             try
             {
                 string folderPath = Path.Combine(Application.StartupPath, "UserData");
-
-                // Generate the safe email string for file search
                 string safeEmail = email.Replace("@", "_at_").Replace(".", "_");
                 string[] userFiles = Directory.GetFiles(folderPath, $"{safeEmail}_*.txt");
 
@@ -55,7 +51,7 @@ namespace DreamMotors
                     return;
                 }
 
-                // Find the latest registration file by ticks in filename
+                // Find the most recent file (latest by ticks)
                 string latestFile = null;
                 long latestTicks = 0;
                 foreach (var file in userFiles)
@@ -79,28 +75,29 @@ namespace DreamMotors
                     return;
                 }
 
-                // Read stored password from file
                 string[] lines = File.ReadAllLines(latestFile);
-                string storedPassword = null;
+                string storedPasswordHash = null;
+
                 foreach (string line in lines)
                 {
-                    if (line.StartsWith("Password: "))
+                    if (line.StartsWith("Password Hash: "))
                     {
-                        storedPassword = line.Substring("Password: ".Length);
+                        storedPasswordHash = line.Substring("Password Hash: ".Length);
                         break;
                     }
                 }
 
-                if (storedPassword == null)
+                if (storedPasswordHash == null)
                 {
                     MessageBox.Show("Password not found in user data.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                if (password == storedPassword)
+                string hashedInput = HashPassword(password);
+
+                if (hashedInput == storedPasswordHash)
                 {
                     MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     DashBoard dashboard = new DashBoard();
                     dashboard.Show();
                     this.Hide();
@@ -116,11 +113,26 @@ namespace DreamMotors
             }
         }
 
+        // Password hashing function (must match registration method)
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Reset resetForm = new Reset();
             resetForm.Show();
-            this.Hide();  // Hide Login while Reset is open
+            this.Hide();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
